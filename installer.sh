@@ -1,23 +1,26 @@
-#! /bin/bash
-all_apps=(git firefox vim)
+#!/bin/bash
+apps=()
+for arg in "$@"
+do
+	apps+="$arg"
+done
 
 echo "Please avoid running this script as root"
-echo "Developer apps"
-echo "${all_apps[@]}"
+echo "${apps[@]}"
 
-printf "Would you like to install all the Developer apps? y/n \n"
+printf "Would you like to install all the apps? y/n \n"
 read var_all
 
 if [ "$var_all" = "Y" ] || [ "$var_all" = "y" ]
 then
-	for key in "${all_apps[@]}"; 
+	for key in "${apps[@]}"; 
 	do 
 		sudo pacman --needed -S "$key"
 	done;
 
 else
 	printf "Personalized installation \n"
-	for key in "${all_apps[@]}" 
+	for key in "${apps[@]}" 
 	do
 		printf "Would you like to install $key? y/n \n"
 		read var

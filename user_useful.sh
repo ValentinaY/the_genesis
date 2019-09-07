@@ -1,5 +1,5 @@
 #! /bin/bash
-all_apps=(spotify ora)
+all_apps=(spotify ora telegram-desktop)
 
 echo "Please avoid running this script as root"
 echo "User useful apps"
