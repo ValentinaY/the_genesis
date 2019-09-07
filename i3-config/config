@@ -175,3 +175,6 @@ floating_maximum_size 1000 x 780
 bar {
         status_command i3status
 }
+
+# Wallpapers
+feh --recursive --randomize --bg-fill ~/Pictures/Wallpapers
