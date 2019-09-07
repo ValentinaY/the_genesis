@@ -11,7 +11,7 @@ then
 fi
 if  [ "$var" = "Y" ] || [ "$var" = "y" ] || [ "$var_all" = "Y" ] || [ "$var_all" = "y" ]
 then
-    yay --needed -S networkmanager
+	sudo pacman --needed -S networkmanager
 else
     echo "Ignoring NetworkManager installation"
 fi

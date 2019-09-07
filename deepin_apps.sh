@@ -12,7 +12,7 @@ if [ "$var_all" = "Y" ] || [ "$var_all" = "y" ]
 then
 	for key in "${all_apps[@]}"; 
 	do 
-		yay --needed -S "$key"
+		sudo pacman --needed -S "$key"
 	done;
 
 else
@@ -23,7 +23,7 @@ else
 		read var
 		if  [ "$var" = "Y" ] || [ "$var" = "y" ]
 		then
-		    yay --needed -S "$key"
+		    sudo pacman --needed -S "$key"
 		else
 		    printf "Ignoring $key installation \n"
 		fi
